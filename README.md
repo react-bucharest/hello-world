@@ -4,7 +4,7 @@
 The purpose of this project is to learn building React.js applications, together.
 
 ## What is this?
-This is an evergrowing project, built collectively during live coding sessions. The functionality of the project is just a pretext for integrating various technologies and technique from the React ecosystem (e.g. webpack, ES6, Redux, Native, etc.). 
+This is an evergrowing project, built collectively during live coding sessions. The functionality of the project is just a pretext for integrating various technologies and techniques from the React ecosystem (e.g. webpack, ES6, Redux, Native, etc.). 
 
 Think of it as a React.js technology playground. Features will added to support whatever new tech we want to learn. (Dream come true, I know!)
 
