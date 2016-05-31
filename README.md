@@ -8,6 +8,9 @@ This is an evergrowing project, built collectively during live coding sessions. 
 
 Think of it as a React.js technology playground. Features will added to support whatever new tech we want to learn. (Dream come true, I know!)
 
+## Roadmap
+1. [June 14](https://www.facebook.com/events/305883106410467/), **_A new beginning_**. More details coming soon!
+
 ## How to contribute?
 1. [Create an Issue](https://github.com/react-bucharest/hello-world/issues/new) with the topic you'd like to cover, where you'll get +1s and feedback from other members.
 2. Once agreed upon the deliverable, you submit a PR and ask for feedback.
@@ -15,6 +18,3 @@ Think of it as a React.js technology playground. Features will added to support 
 4. During the live event, you first hold a brief presentation about what you're about to code.
 5. After the intro, you grab the editor and live code your PR from scratch, explaining each step as you go.
 6. :tada:
-
-## Roadmap
-1. [June 14](https://www.facebook.com/events/305883106410467/), **_A new beginning_**. More details coming soon!
