@@ -17,4 +17,4 @@ Think of it as a React.js technology playground. Features will added to support 
 6. :tada:
 
 ## Roadmap
-Coming soon.
+1. [June 14](https://www.facebook.com/events/305883106410467/), **_A new beginning_**. More details coming soon!
