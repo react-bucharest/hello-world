@@ -1,0 +1,51 @@
+{
+  "name": "react-es6-demo",
+  "version": "0.0.1",
+  "description": "React ES6 demo",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --watch --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/react-bucharest/hello-world.git"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "demo",
+    "webpack",
+    "babel"
+  ],
+  "author": "Gabi Purcaru <gabi@purcaru.com>",
+  "contributors": [
+    {
+      "name": "Ovidiu Cherecheș",
+      "email": "hello@ovidiu.ch",
+      "url": "http://ovidiu.ch"
+    },
+    {
+      "name": "Dan Jipa",
+      "email": "dan.jipa@gmail.com"
+    },
+    {
+      "name": "Gabi Purcaru",
+      "email": "gabi@purcaru.com",
+      "url": "http://gabi.purcaru.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-bucharest/hello-world/issues"
+  },
+  "homepage": "https://github.com/react-bucharest/hello-world#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  }
+}
