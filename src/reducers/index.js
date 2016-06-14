@@ -1,8 +1,15 @@
 import { combineReducers } from 'redux'
-import all from './all'
+import { initialState } from '../config';
 
-const rootReducer = combineReducers({
-  messages: all
-})
-
-export default rootReducer
+export default function rootReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'RECEIVE_TRANSLATION':
+      return Object.assign({}, state, {
+        target: action.target,
+        translatedText: action.translatedText,
+        text: action.text
+      })
+    default:
+      return state
+  }
+}

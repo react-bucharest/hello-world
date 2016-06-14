@@ -10,10 +10,8 @@ export const LANGUAGES = [  {value: 'ro', id: 'ro', text: 'Romana'},
 							];
 
 
-export const initialState = [
-  {
-    text: DEFAULT_MESSAGE,
-    translation: null,
-    target: null
-  }
-];							
+export const initialState = {
+	text: DEFAULT_MESSAGE,
+	translatedText: null,
+	target: null
+};
