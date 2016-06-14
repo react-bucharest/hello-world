@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import all from './all'
 
 const rootReducer = combineReducers({
-  all
+  messages: all
 })
 
 export default rootReducer
