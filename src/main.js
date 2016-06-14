@@ -9,8 +9,6 @@ import { dispatch } from 'redux';
 
 const store = configureStore();
 
-//store.dispatch(fetchTranslation);
-
 render(
     <Provider store={store}>
     	<App />

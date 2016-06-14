@@ -7,8 +7,10 @@ import {translate} from '../actions/index'
 
 let InnerApp = React.createClass({
   render: function() {
+    const {text, translatedText} = this.props
+    
     return <div>
-             <input type="text" id="message" placeholder={this.props.data.text} ref="textInput" />
+             <input type="text" id="message" placeholder={text} ref="textInput" />
 		  	     <select id="target" ref="langSelect">
                 {LANGUAGES.map(function(lang) {
                   return (
@@ -19,7 +21,7 @@ let InnerApp = React.createClass({
                 },this)}
               </select>
 			       <button onClick={this.onTranslate}>Translate</button>
-			       <Translation translatedText={this.props.data.translatedText}/>
+			       <Translation translatedText={translatedText}/>
 		      </div>
   },
 
@@ -30,8 +32,12 @@ let InnerApp = React.createClass({
 });
 
 function mapStateToProps(state)  {
+  const {text, target, translatedText} = state
+
   return {
-    data: state
+    text,
+    target,
+    translatedText
   };
 }
 
