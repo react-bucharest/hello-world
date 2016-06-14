@@ -8,3 +8,12 @@ export const LANGUAGES = [  {value: 'ro', id: 'ro', text: 'Romana'},
 							{value: 'ru', id: 'ru', text: 'Rusa'},
 							{value: 'tr', id: 'tr', text: 'Turca'}
 							];
+
+
+export const initialState = [
+  {
+    text: DEFAULT_MESSAGE,
+    translation: null,
+    target: null
+  }
+];							
