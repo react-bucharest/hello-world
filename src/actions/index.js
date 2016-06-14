@@ -4,7 +4,7 @@ function receiveTranslation(text, target, translatedText) {
   return {
     type: 'RECEIVE_TRANSLATION',
     text: text,
-    target: target, 
+    target: target,
     translatedText: translatedText
   }
 }
