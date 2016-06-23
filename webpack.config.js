@@ -1,19 +1,24 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: './build',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel', query: { presets: ['es2015', 'react'] } }
-    ]
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: { presets: ['es2015', 'react'] },
+      },
+    ],
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './src/index.html' }
-    ])
-  ]
+      { from: './src/index.html' },
+    ]),
+  ],
 };

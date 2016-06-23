@@ -1,57 +1,68 @@
-import React from 'react'
-import 'whatwg-fetch'
-import { connect } from 'react-redux'
-import { API_KEY, LANGUAGES, DEFAULT_MESSAGE } from '../config'
-import Translation from './Translation'
-import {translate} from '../actions/index'
+import React, { PropTypes } from 'react';
+import 'whatwg-fetch';
+import { connect } from 'react-redux';
+import { LANGUAGES } from '../config';
+import Translation from './Translation';
+import { translate } from '../actions/index';
 
-let InnerApp = React.createClass({
-  render: function() {
-    const {text, translatedText} = this.props
+class InnerApp extends React.Component {
+  constructor() {
+    super();
 
-    return <div>
-       <input type="text" id="message" placeholder={text} ref="textInput" />
-	     <select id="target" ref="langSelect">
-          {LANGUAGES.map(function(lang) {
-            return (
-              <option value={lang.value} key={lang.id}>
-                {lang.text}
-              </option>
-            )
-          }, this)}
-        </select>
-       <button onClick={this.onTranslate}>Translate</button>
-       <Translation translatedText={translatedText}/>
-    </div>
-  },
+    this.onTranslate = this.onTranslate.bind(this);
+  }
 
-  onTranslate: function() {
-    const {textInput, langSelect} = this.refs
+  onTranslate() {
+    const { textInput, langSelect } = this.refs;
 
     this.props.onTranslate(textInput.value, langSelect.value);
   }
-  	
-});
 
-function mapStateToProps(state)  {
-  const {text, target, translatedText} = state
+  render() {
+    const { text, translatedText } = this.props;
+
+    return (
+      <div>
+        <input type="text" id="message" placeholder={text} ref="textInput" />
+        <select id="target" ref="langSelect">
+            {LANGUAGES.map((lang) => (
+              <option value={lang.value} key={lang.id}>
+                {lang.text}
+              </option>
+            ), this)}
+        </select>
+        <button onClick={this.onTranslate}>Translate</button>
+        <Translation translatedText={translatedText} />
+      </div>
+    );
+  }
+}
+
+InnerApp.propTypes = {
+  text: PropTypes.string.isRequired,
+  translatedText: PropTypes.string.isRequired,
+  onTranslate: PropTypes.func.isRequired,
+};
+
+function mapStateToProps(state) {
+  const { text, target, translatedText } = state;
 
   return {
     text,
     target,
-    translatedText
+    translatedText,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    onTranslate: (text, target) => dispatch(translate(text, target))
+    onTranslate: (text, target) => dispatch(translate(text, target)),
   };
 }
 
-let App = connect(
+const App = connect(
   mapStateToProps,
   mapDispatchToProps
 )(InnerApp);
 
-export default App
+export default App;
