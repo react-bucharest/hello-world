@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import { initialState } from '../config';
 
 export default function rootReducer(state = initialState, action) {
@@ -7,9 +6,9 @@ export default function rootReducer(state = initialState, action) {
       return Object.assign({}, state, {
         target: action.target,
         translatedText: action.translatedText,
-        text: action.text
-      })
+        text: action.text,
+      });
     default:
-      return state
+      return state;
   }
 }
