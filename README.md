@@ -1,5 +1,7 @@
 # [Hello](https://www.youtube.com/watch?v=PUjvaMWKeBI) World, a React.js Odyssey
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/react-bucharest/hello-world.svg)](https://greenkeeper.io/)
+
 ## Mission
 The purpose of this project is to learn building React.js applications, together.
 
